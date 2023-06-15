@@ -4,6 +4,10 @@
 Seja bem-vindo
 {% endblock %}
 {% block body %}
+{% for i in curso%}
+<a class="nav-link" href="{% url 'curso' i.id %}">{{i.nome}}</a>
+</li>
+{% endfor %}
 <div class="row mt-5">
     <div class="col-lg-12">
         <h1 class="display-4 text-center mb-4">Bem-vindo ao Blog do Aluno Hugo josé!</h1>
@@ -12,13 +16,16 @@ Seja bem-vindo
             É com grande prazer que o recebemos no nosso espaço digital. Aqui, exploramos alguns cursos,
             dirigido por ninguém menos que o Aluno Hugo José.
         </p>
-
+        {% for curso in curso %}
+        <h2><a href="{% url 'curso' curso.id %}">{{ curso.nome }}</a></h2>
+        {% endfor %}
         <p>
             O aluno Hugo é um estudante de informática do 4º ano matutino
         </p>
 
         <p>
-            Sobre o aluno: ele pretende seguir na área, mesmos sabendo que é dificil, mas vai se dedicar bastante para conseguir.
+            Sobre o aluno: ele pretende seguir na área, mesmos sabendo que é dificil, mas vai se dedicar bastante para
+            conseguir.
         </p>
 
         <h2 class="mb-4">Sinta-se à vontade para explorar, ler, aprender sobre cada curso.</h2>
@@ -29,3 +36,8 @@ Seja bem-vindo
     </div>
 </div>
 {% endblock %}
+
+
+
+  
+

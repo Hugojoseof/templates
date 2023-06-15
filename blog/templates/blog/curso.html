@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% block title %}
+    Seja bem-vindo ao curso {{curso.nome}}
+{% endblock %}
+{% block content %}
+    
+    <h2>{{ curso.nome }}</h2>
+    <p>{{ curso.descricao }}</p>
+    <img src="{{curso.imagem.url }}" alt="">
+
+{% endblock%}

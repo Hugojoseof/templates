@@ -1,13 +1,10 @@
 from django.contrib import admin
-from .models import Postagem,Categoria
+from .models import Curso
 # Register your models here.
 
-@admin.register(Postagem)
-class PostagemAdmin(admin.ModelAdmin):
-    list_display=('titulo','texto','data_criacao','imagem')
+@admin.register(Curso)
+class CursoAdmin(admin.ModelAdmin):
+    list_display=('nome','descricao','data_criacao','imagem')
 
 
-@admin.register(Categoria)
-class CategoriaAdmin(admin.ModelAdmin):
-    list_display=('nome',)
 
