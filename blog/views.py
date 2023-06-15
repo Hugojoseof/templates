@@ -10,7 +10,7 @@ from django.shortcuts import get_object_or_404
 
 def index(request):
     curso = Curso.objects.all()
-    context = {'curso': curso}
+    context = {'cursos': curso}
     return render(request,'blog/index.html',context)
 
 
