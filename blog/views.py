@@ -9,7 +9,8 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 
 def index(request):
-    context={'mensagem': 'Estamos felizes por tê-lo conosco. Explore nosso site para saber mais!!!!'}
+    curso = Curso.objects.all()
+    context = {'curso': curso}
     return render(request,'blog/index.html',context)
 
 
